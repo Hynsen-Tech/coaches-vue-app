@@ -16,7 +16,7 @@ const actions = {
       message: payload.message,
     };
     const response = await fetch(
-      `https://URL.firebasedatabase.app/requests/${payload.coachId}.json`,
+      `https://URL-FIREBASE.firebasedatabase.app/requests/${payload.coachId}.json`,
       {
         method: "POST",
         body: JSON.stringify(newRequest),
@@ -42,7 +42,7 @@ const actions = {
     const coachId = context.rootGetters.userId;
     const token = context.rootGetters.getToken;
     const response = await fetch(
-      `https://URL.firebasedatabase.app/requests/${coachId}.json?auth=${token}`
+      `https://URL-FIREBASE.firebasedatabase.app/requests/${coachId}.json?auth=${token}`
     );
 
     const responseData = await response.json();

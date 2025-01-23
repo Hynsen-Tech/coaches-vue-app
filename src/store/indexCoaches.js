@@ -26,7 +26,7 @@ const actions = {
     const token = context.rootGetters.getToken;
 
     const response = await fetch(
-      `https://URL.firebasedatabase.app/coaches/${coachId}.json?auth=${token}`,
+      `https://URL-FIREBASE.firebasedatabase.app/coaches/${coachId}.json?auth=${token}`,
       {
         method: "PUT",
         body: JSON.stringify(coachData),
@@ -49,7 +49,7 @@ const actions = {
     }
 
     const response = await fetch(
-      `https://URL.firebasedatabase.app/coaches.json`
+      `https://URL-FIREBASE.firebasedatabase.app/coaches.json`
     );
 
     //console.log(response)

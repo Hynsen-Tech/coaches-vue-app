@@ -25,9 +25,9 @@ const actions = {
   async auth(context, payload) {
     var url = "https://URL:";
     if (payload.mode === "signup") {
-      url = url + `signUp?key=KEY`;
+      url = url + `signUp?key=KEY-VALUE`;
     } else {
-      url = url + `signInWithPassword?key=KEY`;
+      url = url + `signInWithPassword?key=KEY-VALUE`;
     }
 
     const response = await fetch(url, {
